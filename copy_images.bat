@@ -1,0 +1,17 @@
+@echo off
+if not exist "client\public\gallery" mkdir "client\public\gallery"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_0_1769906134303.jpg" "client\public\gallery\kp-1.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_1_1769906134303.jpg" "client\public\gallery\kp-2.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_2_1769906134303.jpg" "client\public\gallery\kp-3.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_3_1769906134303.jpg" "client\public\gallery\kp-4.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_0_1769906196921.jpg" "client\public\gallery\kp-5.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_1_1769906196921.jpg" "client\public\gallery\kp-6.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_2_1769906196921.jpg" "client\public\gallery\kp-7.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_3_1769906196921.jpg" "client\public\gallery\kp-8.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_4_1769906196921.jpg" "client\public\gallery\kp-9.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_0_1769906461685.jpg" "client\public\gallery\kp-10.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_1_1769906461685.jpg" "client\public\gallery\kp-11.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_2_1769906461685.jpg" "client\public\gallery\kp-12.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_3_1769906461685.jpg" "client\public\gallery\kp-13.jpg"
+copy /Y "C:\Users\FLP\.gemini\antigravity\brain\fae23ce4-35b1-488d-a8db-518962befaa5\uploaded_media_4_1769906461685.jpg" "client\public\gallery\kp-14.jpg"
+echo Done

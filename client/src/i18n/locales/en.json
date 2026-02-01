@@ -1,0 +1,97 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "gallery": "Gallery",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title1": "KAIQUE",
+        "title2": "FONTINY",
+        "scroll": "Scroll to explore"
+    },
+    "stats": {
+        "label": "Digital Audience",
+        "followers": "Followers on",
+        "likes": "Total likes on content",
+        "reach": "Monthly Reach",
+        "k": "K",
+        "m": "M",
+        "followers_short": "Followers",
+        "likes_short": "Likes",
+        "reach_short": "Reach"
+    },
+    "experience": {
+        "label": "Aesthetic Philosophy",
+        "style_title": "VISUAL STYLE",
+        "style_desc": "My art direction is based on contrast, light, and shadow. I believe aesthetics is the first layer of any successful communication.",
+        "fashion_title": "FASHION AS LANGUAGE",
+        "fashion_desc1": "Fashion is a powerful tool of expression. Through it, we communicate not only our style, but our vision of the world, our values, and our identity.",
+        "fashion_desc2": "In my work, I seek to translate this language in an authentic and impactful way, uniting refined aesthetics with a strategic narrative that resonates with the audience.",
+        "quote": "Aesthetics without strategy is just decoration. Strategy without aesthetics is invisible.",
+        "quote_main": "The construction of a project requires not only technical mastery, but also the sensitivity to give visibility to what is often imperceptible."
+    },
+    "about": {
+        "label": "About me",
+        "title": "WHO AM I?",
+        "specs": "Model Specs",
+        "height": "Height",
+        "weight": "Weight",
+        "mannequin": "Mannequin",
+        "shoes": "Shoes",
+        "eyes": "Eyes",
+        "eyes_val": "Brown",
+        "hair": "Hair",
+        "hair_val": "Black",
+        "p1": "I am 25 years old and passionate about communication.",
+        "p2": "Since childhood, I have developed a natural affinity for creating and directing projects for social media.",
+        "p3": "An activity that deeply fascinates me.",
+        "p4": "I constantly seek to improve my skills to bring ideas to life that unite",
+        "highlight": "PURPOSE, AESTHETICS, AND STRATEGY.",
+        "edu_label": "Education",
+        "edu_val": "Graphic Design",
+        "edu_date": "Since 2022",
+        "focus_label": "Focus",
+        "focus_val": "Visual Communication",
+        "focus_sub": "Social Media & Direction"
+    },
+    "services": {
+        "label": "Specialties",
+        "title_main": "MY",
+        "title_sub": "EXPERTISE",
+        "item1_title": "Graphic Design",
+        "item1_desc": "Visual identity, layout, and creation of digital pieces with a focus on aesthetics and functionality.",
+        "item2_title": "Image Consulting",
+        "item2_desc": "Alignment of personal or brand image with communication goals, uniting style and purpose.",
+        "item3_title": "Styling",
+        "item3_desc": "Creative fashion direction, selection of looks, and visual composition for editorials, campaigns, and brands.",
+        "item4_title": "Content Creation",
+        "item4_desc": "Development of visual narratives for social media, uniting creativity and engagement strategy."
+    },
+    "campaigns": {
+        "label": "Success Cases",
+        "title": "CAMPAIGNS",
+        "subtitle": "& ADVERTISING",
+        "item1_title": "Official Reel",
+        "item1_desc": "Choreographic and camera presence presentation for motion work.",
+        "item2_desc": "Advertising campaign focused on hair care and natural shine.",
+        "item3_desc": "Presence and lifestyle in collaboration with the global music platform.",
+        "item4_desc": "Institutional advertising focused on health and daily well-being, feat. Bia Gremion.",
+        "item5_desc": "Artistic distribution and performance for singer Murillo Zyes."
+    },
+    "contact": {
+        "label": "Contact",
+        "title_main": "GET IN",
+        "title_sub": "TOUCH",
+        "desc": "Have a project in mind? Let's talk about how I can help transform your ideas into visual reality.",
+        "social": "Social Media",
+        "status_title": "Available for new projects",
+        "status_desc": "Currently accepting projects for creative direction, social media, and photography.",
+        "rights": "All rights reserved.",
+        "footer_concept": "Concept, Direction and Communication",
+        "whatsapp_tooltip": "Chat with Kaique",
+        "whatsapp_msg": "Hi Kaique, I saw your portfolio and would like to talk about a project!"
+    }
+}

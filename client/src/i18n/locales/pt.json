@@ -1,0 +1,97 @@
+{
+    "nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "services": "Atuações",
+        "gallery": "Galeria",
+        "projects": "Projetos",
+        "contact": "Contato"
+    },
+    "hero": {
+        "title1": "KAIQUE",
+        "title2": "FONTINY",
+        "scroll": "Role para explorar"
+    },
+    "stats": {
+        "label": "Auditório Digital",
+        "followers": "Seguidores no",
+        "likes": "Me gusta totales em conteúdos",
+        "reach": "Alcance Mensual",
+        "k": "MIL",
+        "m": "MILHÕES",
+        "followers_short": "Followers",
+        "likes_short": "Likes",
+        "reach_short": "Reach"
+    },
+    "experience": {
+        "label": "Filosofia Estética",
+        "style_title": "VISUAL STYLE",
+        "style_desc": "Minha direção de arte é baseada no contraste, na luz e na sombra. Acredito que a estética é a primeira camada de qualquer comunicação de sucesso.",
+        "fashion_title": "MODA COMO LINGUAGEM",
+        "fashion_desc1": "A moda é uma ferramenta de expressão poderosa. Através dela, comunicamos não apenas nosso estilo, mas nossa visão de mundo, nossos valores e nossa identidade.",
+        "fashion_desc2": "Em meus trabalhos, busco traduzir essa linguagem de forma autêntica e impactante, unindo a estética refinada com uma narrativa estratégica que ressoa com o público.",
+        "quote": "A estética sem estratégia é apenas decoração. A estratégia sem estética é invisível.",
+        "quote_main": "A construção de um projeto exige não apenas domínio técnico, mas também sensibilidade em dar visibilidade ao que, muitas vezes, é imperceptível."
+    },
+    "about": {
+        "label": "Sobre mim",
+        "title": "QUEM SOU?",
+        "specs": "Model Specs",
+        "height": "Altura",
+        "weight": "Peso",
+        "mannequin": "Manequim",
+        "shoes": "Calçado",
+        "eyes": "Olhos",
+        "eyes_val": "Castanhos",
+        "hair": "Cabelo",
+        "hair_val": "Preto",
+        "p1": "Tenho 25 anos e sou apaixonado por comunicação.",
+        "p2": "Desde a infância, desenvolvi uma afinidade natural em criar e dirigir projetos para as redes sociais.",
+        "p3": "Uma atividade que me fascina profundamente.",
+        "p4": "Busco constantemente aprimorar minhas habilidades para dar vida a ideias que unam",
+        "highlight": "PROPÓSITO, ESTÉTICA E ESTRATÉGIA.",
+        "edu_label": "Formação",
+        "edu_val": "Design Gráfico",
+        "edu_date": "Desde 2022",
+        "focus_label": "Foco",
+        "focus_val": "Comunicação Visual",
+        "focus_sub": "Social Media & Direção"
+    },
+    "services": {
+        "label": "Especialidades",
+        "title_main": "MINHAS",
+        "title_sub": "ATUAÇÕES",
+        "item1_title": "Design Gráfico",
+        "item1_desc": "Identidade visual, diagramação e criação de peças digitais com foco em estética e funcionalidade.",
+        "item2_title": "Consultoria de Imagem",
+        "item2_desc": "Alinhamento da imagem pessoal ou de marca com os objetivos de comunicação, unindo estilo e propósito.",
+        "item3_title": "Styling",
+        "item3_desc": "Direção criativa de moda, seleção de looks e composição visual para editoriais, campanhas e marcas.",
+        "item4_title": "Criação de Conteúdo",
+        "item4_desc": "Desenvolvimento de narrativas visuais para redes sociais, unindo criatividade e estratégia de engajamento."
+    },
+    "campaigns": {
+        "label": "Cases de Sucesso",
+        "title": "CAMPANHAS",
+        "subtitle": "& PUBLICIDADE",
+        "item1_title": "Official Reel",
+        "item1_desc": "Apresentação coreográfica e de presença de câmera para trabalhos em movimento.",
+        "item2_desc": "Campanha publicitária focada em cuidados capilares e brilho natural.",
+        "item3_desc": "Presença e lifestyle em colaboração com a plataforma global de música.",
+        "item4_desc": "Publicidade institucional focada em saúde e bem-estar cotidiano, feat. Bia Gremion.",
+        "item5_desc": "Divulgação artística e performance para o cantor Murillo Zyes."
+    },
+    "contact": {
+        "label": "Contato",
+        "title_main": "ENTRE EM",
+        "title_sub": "CONTATO",
+        "desc": "Tem um projeto em mente? Vamos conversar sobre como posso ajudar a transformar suas ideias em realidade visual.",
+        "social": "Redes Sociais",
+        "status_title": "Disponível para novos projetos",
+        "status_desc": "Atualmente aceitando projetos de direção criativa, social media e fotografia.",
+        "rights": "Todos os direitos reservados.",
+        "footer_concept": "Conceito, Direção e Comunicação",
+        "whatsapp_tooltip": "Falar com Kaique",
+        "whatsapp_msg": "Olá Kaique, vi seu portfólio e gostaria de conversar sobre um projeto!"
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "services": "Servicios",
+        "gallery": "Galería",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title1": "KAIQUE",
+        "title2": "FONTINY",
+        "scroll": "Desliza para explorar"
+    },
+    "stats": {
+        "label": "Audiencia Digital",
+        "followers": "Seguidores en",
+        "likes": "Me gusta totales en contenido",
+        "reach": "Alcance Mensual",
+        "k": "MIL",
+        "m": "MILLONES",
+        "followers_short": "Followers",
+        "likes_short": "Likes",
+        "reach_short": "Reach"
+    },
+    "experience": {
+        "label": "Filosofía Estética",
+        "style_title": "ESTILO VISUAL",
+        "style_desc": "Mi dirección de arte se basa en o contraste, la luz y la sombra. Creo que la estética es la primera capa de cualquier comunicación de éxito.",
+        "fashion_title": "MODA COMO LENGUAJE",
+        "fashion_desc1": "La moda es una poderosa herramienta de expresión. A través de ella comunicamos no sólo nuestro estilo, sino nuestra visión del mundo, nuestros valores y nuestra identidad.",
+        "fashion_desc2": "En mis trabajos busco traducir este lenguaje de una manera auténtica e impactante, uniendo una estética refinada con una narrativa estratégica que resuene en el público.",
+        "quote": "La estética sin estrategia é sólo decoración. La estrategia sin estética es invisible.",
+        "quote_main": "La construcción de un proyecto requiere no sólo dominio técnico, sino también la sensibilidad para dar visibilidad a lo que muchas veces es imperceptible."
+    },
+    "about": {
+        "label": "Sobre mí",
+        "title": "¿QUIÉN SOY?",
+        "specs": "Model Specs",
+        "height": "Altura",
+        "weight": "Peso",
+        "mannequin": "Maniquí",
+        "shoes": "Calzado",
+        "eyes": "Ojos",
+        "eyes_val": "Castaños",
+        "hair": "Cabello",
+        "hair_val": "Negro",
+        "p1": "Tengo 25 años y soy un apasionado de la comunicación.",
+        "p2": "Desde mi infancia, he desenvolvido una afinidad natural por crear y dirigir proyectos para redes sociales.",
+        "p3": "Una actividad que me fascina profundamente.",
+        "p4": "Busco constantemente mejorar mis habilidades para dar vida a ideas que unan",
+        "highlight": "PROPÓSITO, ESTÉTICA Y ESTRATEGIA.",
+        "edu_label": "Formación",
+        "edu_val": "Diseño Gráfico",
+        "edu_date": "Desde 2022",
+        "focus_label": "Enfoque",
+        "focus_val": "Comunicación Visual",
+        "focus_sub": "Social Media & Dirección"
+    },
+    "services": {
+        "label": "Especialidades",
+        "title_main": "MIS",
+        "title_sub": "ACTUACIONES",
+        "item1_title": "Diseño Gráfico",
+        "item1_desc": "Identidade visual, maquetación y creación de piezas digitales enfocadas a la estética y la funcionalidad.",
+        "item2_title": "Consultoría de Imagen",
+        "item2_desc": "Alineación de la imagen personal o de marca con los objetivos de comunicación, uniendo estilo y propósito.",
+        "item3_title": "Styling",
+        "item3_desc": "Dirección creativa de moda, selección de looks y composición visual para editoriales, campañas y marcas.",
+        "item4_title": "Creación de Conteúdo",
+        "item4_desc": "Desarrollo de narrativas visuales para redes sociales, uniendo creatividad y estrategia de engagement."
+    },
+    "campaigns": {
+        "label": "Casos de Éxito",
+        "title": "CAMPAÑAS",
+        "subtitle": "& PUBLICIDAD",
+        "item1_title": "Official Reel",
+        "item1_desc": "Presentación coreográfica y presencia ante la cámara para trabajos en movimiento.",
+        "item2_desc": "Campaña publicitaria centrada en el cuidado del cabello y el brillo natural.",
+        "item3_desc": "Presencia y estilo de vida en colaboración con la plataforma global de música.",
+        "item4_desc": "Publicidad institucional enfocada en la salud y el bienestar diario, feat. Bia Gremion.",
+        "item5_desc": "Divulgación artística y actuación para el cantante Murillo Zyes."
+    },
+    "contact": {
+        "label": "Contacto",
+        "title_main": "PONTE EN",
+        "title_sub": "CONTACTO",
+        "desc": "¿Tienes un proyecto en mente? Hablemos de cómo puedo ayudarte a transformar tus ideas en realidad visual.",
+        "social": "Redes Sociales",
+        "status_title": "Disponible para nuevos proyectos",
+        "status_desc": "Actualmente aceptando proyectos de dirección creativa, social media y fotografía.",
+        "rights": "Todos los derechos reservados.",
+        "footer_concept": "Concepto, Dirección y Comunicación",
+        "whatsapp_tooltip": "Hablar con Kaique",
+        "whatsapp_msg": "¡Hola Kaique, vi tu portfólio y me gustaría hablar sobre um proyecto!"
+    }
+}
