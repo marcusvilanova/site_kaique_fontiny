@@ -273,9 +273,9 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
   font-size: var(--fs-hero); line-height: 0.92; letter-spacing: -0.04em; font-weight: 800;
   text-transform: uppercase;
 }
-.hero__title .ln { display: block; overflow: hidden; }
+.hero__title .ln { display: block; overflow: hidden; padding-bottom: 0.09em; margin-bottom: -0.09em; }
 /* estado inicial deslocado: o nome SOBE da máscara quando startHero() libera (o JS só remove o transform) */
-.hero__title .ln > span { display: block; transform: translateY(110%); will-change: transform; padding-bottom: 0.06em; margin-bottom: -0.06em; }
+.hero__title .ln > span { display: block; transform: translateY(120%); will-change: transform; }
 .hero__title em { font-style: normal; font-weight: 800; text-transform: uppercase; }
 .hero__foot { display: flex; flex-wrap: wrap; gap: clamp(1.5rem,4vw,4rem); align-items: flex-end; justify-content: space-between; margin-top: clamp(1.5rem,4vh,2.6rem); }
 .hero__sub { max-width: 42ch; color: var(--ink-2); font-size: var(--fs-lead); font-weight: 400; line-height: 1.4; }
@@ -356,9 +356,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 @keyframes revealIn  { from { opacity: 0; transform: translateY(54px); } to { opacity: 1; transform: none; } }
 @keyframes revealSoft { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 
-.line-mask { display: block; overflow: hidden; }
-/* padding compensa descendentes (g, j, ç) p/ a máscara não cortar; a margem negativa devolve o fluxo */
-.line-mask > * { display: block; transform: translateY(110%); transition: transform 1s var(--ease); padding-bottom: 0.15em; margin-bottom: -0.15em; }
+/* padding NA máscara (é onde o overflow corta): folga p/ descendentes (g, j, ç).
+   a margem negativa devolve o espaço ao fluxo. o filho parte 130% p/ ficar 100% oculto. */
+.line-mask { display: block; overflow: hidden; padding-bottom: 0.16em; margin-bottom: -0.16em; }
+.line-mask > * { display: block; transform: translateY(130%); transition: transform 1s var(--ease); }
 .line-mask.in > * { transform: none; }
 .line-mask.d1 > * { transition-delay: .09s; }
 .line-mask.d2 > * { transition-delay: .18s; }
@@ -375,13 +376,15 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 .split .word > span { display: inline-block; transform: translateY(115%); transition: transform .9s var(--ease); }
 .split.in .word > span { transform: none; }
 
-/* rolling label — hover-assinatura dos links (texto rola p/ cima) */
-.roll { overflow: hidden; position: relative; }
+/* rolling label — hover-assinatura dos links (texto rola p/ cima).
+   .roll é um wrapper DENTRO do link, então o ::after (underline do nav),
+   o border-bottom (work__link) e o índice ::before (menu mobile) ficam de fora da máscara. */
+.roll { display: block; overflow: hidden; position: relative; }
 .roll .roll__t { display: block; transition: transform .45s var(--ease); }
 .roll .roll__t + .roll__t { position: absolute; inset: 0; transform: translateY(102%); }
 @media (hover: hover) {
-  .roll:hover .roll__t:first-child { transform: translateY(-102%); }
-  .roll:hover .roll__t + .roll__t { transform: none; }
+  a:hover > .roll .roll__t:first-child { transform: translateY(-102%); }
+  a:hover > .roll .roll__t + .roll__t { transform: none; }
 }
 
 /* ============================================================
@@ -487,7 +490,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 /* wrapper com 11% de folga vertical: headroom do parallax interno (JS só escreve transform aqui) */
 .pf__par { position: absolute; left: 0; right: 0; top: -5.5%; bottom: -5.5%; }
 .pf__par img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+  width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;
   transform: scale(1.12); transition: transform 1.7s var(--ease-io);
 }
 .pf__item.in .pf__par img { transform: scale(1); }
@@ -540,7 +543,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 
 .vids__frame {
   position: relative; justify-self: center;
-  width: min(100%, calc(80vh * 9 / 16));
+  width: min(100%, calc(88vh * 9 / 16));
   aspect-ratio: 9 / 16;
   border-radius: 8px; overflow: hidden; background: var(--paper-3);
   box-shadow: 0 45px 90px -45px rgba(14,13,10,0.5);
@@ -578,13 +581,15 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 .vids__frame.snd .vids__sound .eq i { animation-play-state: running; }
 @keyframes eqBar { from { transform: scaleY(0.25); } to { transform: scaleY(1); } }
 
-.vids__cap { display: flex; flex-direction: column; }
+.vids__cap { display: flex; flex-direction: column; max-width: 44ch; }
 /* legenda em cascata, ecoando a dos projetos */
 .vids__cap > * { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .vids__item.in .vids__cap > * { opacity: 1; transform: none; }
 .vids__item.in .vids__cap > :nth-child(1) { transition-delay: .25s; }
 .vids__item.in .vids__cap > :nth-child(2) { transition-delay: .37s; }
 .vids__item.in .vids__cap > :nth-child(3) { transition-delay: .49s; }
+.vids__item.in .vids__cap > :nth-child(4) { transition-delay: .61s; }
+.vids__item.in .vids__cap > :nth-child(5) { transition-delay: .73s; }
 .vids__num {
   font-family: var(--font-display); font-weight: 700; line-height: 1;
   font-size: clamp(3rem, 7vw, 6.5rem); letter-spacing: -0.03em;
@@ -592,13 +597,17 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
   margin-bottom: 1.3rem;
 }
 .vids__brand { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h3); line-height: 1.04; letter-spacing: -0.02em; }
-.vids__role { margin-top: 0.75rem; font-size: var(--fs-body); color: var(--ink-3); max-width: 34ch; }
+.vids__role { margin-top: 0.75rem; font-size: var(--fs-body); color: var(--ink-3); }
+.vids__desc { margin-top: 1.3rem; color: var(--ink-2); font-size: var(--fs-body); line-height: 1.55; }
+.vids__tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+.vids__tags li { border: 1px solid var(--line-gold); color: var(--ink-3); border-radius: 100px; padding: 0.4rem 0.95rem; font-size: 0.78rem; letter-spacing: 0.02em; }
 
 @media (max-width: 820px) {
-  .vids__item, .vids__item:nth-child(even) { grid-template-columns: 1fr; gap: 1.6rem; }
+  .vids__item, .vids__item:nth-child(even) { grid-template-columns: 1fr; gap: 1.8rem; }
   .vids__item:nth-child(even) .vids__frame,
   .vids__item:nth-child(even) .vids__cap { grid-column: 1; grid-row: auto; }
   .vids__frame { width: min(86vw, calc(74vh * 9 / 16)); }
+  .vids__cap { max-width: none; }
   .vids__num { font-size: clamp(2.6rem,13vw,4rem); margin-bottom: 0.6rem; }
 }
 
@@ -674,6 +683,50 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 .contact__row a .v { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--on-dark); transition: color .3s; }
 .contact__row a:hover .v { color: var(--stone); }
 
+/* ---- Formulário de contato ---- */
+.cform { max-width: 760px; margin: clamp(4rem,8vw,7rem) auto 0; text-align: left; }
+.cform__intro { margin-bottom: 2rem; }
+.cform__intro .eyebrow { color: var(--on-dark-2); }
+.cform__intro .eyebrow::before { background: rgba(255,255,255,0.4); }
+.cform__intro p { color: var(--on-dark-2); margin-top: 0.9rem; max-width: 54ch; }
+.cform__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.cform__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.cform__field { display: flex; flex-direction: column; gap: 0.55rem; }
+.cform__field--full { grid-column: 1 / -1; }
+.cform__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--on-dark-2); }
+.cform__label i { font-style: normal; text-transform: none; letter-spacing: 0.01em; opacity: 0.6; margin-left: 0.45rem; font-size: 0.92em; }
+.cform input, .cform textarea {
+  width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16); border-radius: 6px;
+  color: var(--on-dark); font-family: var(--font-sans); font-size: 1rem; padding: 0.9rem 1rem;
+  transition: border-color .3s, background .3s;
+}
+.cform input::placeholder, .cform textarea::placeholder { color: rgba(255,255,255,0.34); }
+.cform input:focus, .cform textarea:focus { outline: none; border-color: var(--on-dark); background: rgba(255,255,255,0.07); }
+.cform textarea { resize: vertical; min-height: 130px; line-height: 1.5; }
+.cform__drop {
+  position: relative; display: flex; align-items: center; gap: 0.7rem; cursor: pointer;
+  border: 1px dashed rgba(255,255,255,0.24); border-radius: 6px; padding: 0.9rem 1rem; color: var(--on-dark-2);
+  transition: border-color .3s, color .3s;
+}
+.cform__drop:hover, .cform__drop:focus-within { border-color: var(--on-dark); color: var(--on-dark); }
+.cform__drop input[type="file"] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.cform__dropText { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cform__dropText::before { content: "↑"; margin-right: 0.5rem; opacity: 0.7; }
+.cform__foot { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.9rem; }
+.cform__submit {
+  display: inline-flex; align-items: center; gap: 0.55rem; cursor: pointer;
+  border: 1px solid var(--on-dark); color: var(--graphite); background: var(--on-dark);
+  border-radius: 100px; padding: 0.95rem 2rem; font-family: var(--font-sans); font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600;
+  transition: background .35s var(--ease), color .35s var(--ease); will-change: transform;
+}
+.cform__submit:hover { background: transparent; color: var(--on-dark); }
+.cform__submit:disabled { opacity: 0.5; cursor: default; }
+.cform__status { font-size: 0.92rem; color: var(--on-dark-2); }
+.cform__status.is-ok { color: #86D9AE; }
+.cform__status.is-error { color: #E8A0A0; }
+@media (max-width: 620px) { .cform__grid { grid-template-columns: 1fr; } }
+
 .btn {
   display:inline-flex; align-items:center; gap:0.7rem; border: 1px solid var(--ink); color: var(--ink);
   border-radius: 100px; padding: 0.9rem 1.8rem; font-family: var(--font-sans); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600;
@@ -732,6 +785,9 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.03
 /* Sem JS, nada fica escondido: os reveals dependem do motor de interação */
 @media (scripting: none) {
   .reveal, .reveal-soft, .line-mask > *, .hero__title .ln > span,
+  .hero__portrait, .hero__portrait img, .nav__menu .nav__link,
   .pf__media, .pf__par img, .pf__cap > *, .vids__frame, .vids__item .vids__frame, .vids__cap > *,
   .contact, .wipe, .wipe img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .eyebrow::before { transform: none !important; }
+  .marquee__track { animation: none !important; }
 }

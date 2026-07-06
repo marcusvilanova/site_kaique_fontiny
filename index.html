@@ -319,6 +319,8 @@
             <span class="vids__num">01</span>
             <span class="vids__brand">Pantene</span>
             <span class="vids__role">Publicidade · direção, captação e edição</span>
+            <p class="vids__desc">Reel publicitário de lançamento, do roteiro à finalização — gancho nos primeiros segundos e ritmo pensado para retenção.</p>
+            <ul class="vids__tags"><li>Roteiro</li><li>Captação</li><li>Edição</li><li>Color grading</li></ul>
           </figcaption>
         </figure>
 
@@ -332,6 +334,8 @@
             <span class="vids__num">02</span>
             <span class="vids__brand">Cobertura de artista</span>
             <span class="vids__role">Evento · direção e edição</span>
+            <p class="vids__desc">Cobertura audiovisual de premiação em tempo real — captação ágil e edição no ritmo do evento, publicada durante a ação.</p>
+            <ul class="vids__tags"><li>Tempo real</li><li>Captação</li><li>Edição</li><li>Stories</li></ul>
           </figcaption>
         </figure>
       </div>
@@ -386,7 +390,6 @@
 
   <!-- ============ CONTATO ============ -->
   <section class="section contact" id="contato">
-    <div class="atmos-gold" aria-hidden="true"></div>
     <div class="wrap">
       <span class="eyebrow contact__kick reveal no-line">Vamos conversar</span>
       <h2 class="contact__big">
@@ -395,10 +398,57 @@
       </h2>
       <a href="mailto:contatokaiquefontiny@outlook.com" class="contact__mail reveal d2" data-cursor data-cursor-label="escrever">contatokaiquefontiny@outlook.com</a>
       <div class="contact__row reveal d3">
-        <a href="tel:+5511944660088" data-magnetic><span class="k">Telefone</span><span class="v">(11) 94466-0088</span></a>
+        <a href="https://wa.me/5511944660088?text=Ol%C3%A1%2C%20Kaique%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" data-magnetic><span class="k">WhatsApp</span><span class="v">Iniciar conversa ↗</span></a>
         <a href="https://instagram.com/kaiquefontiny" target="_blank" rel="noopener" data-magnetic><span class="k">Instagram</span><span class="v">@kaiquefontiny</span></a>
         <a href="https://www.linkedin.com/in/kaique-augusto-5b6880180/recent-activity/all/" target="_blank" rel="noopener" data-magnetic><span class="k">LinkedIn</span><span class="v">Kaique Augusto</span></a>
         <a href="mailto:contatokaiquefontiny@outlook.com" data-magnetic><span class="k">E-mail</span><span class="v">contatokaiquefontiny</span></a>
+      </div>
+
+      <!-- Formulário → e-mail do Kaique (Web3Forms). Cole a access key no input hidden abaixo. -->
+      <div class="cform reveal-soft">
+        <div class="cform__intro">
+          <span class="eyebrow no-line">Envie uma proposta</span>
+          <p>Conte sobre o projeto e, se quiser, anexe um briefing ou proposta. Vai direto para o e-mail do Kaique.</p>
+        </div>
+        <form class="cform__form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="access_key" value="d99d2a56-9c95-400b-914f-46f7c943ab7f" />
+          <input type="hidden" name="subject" value="Novo contato pelo portfólio — Kaique Fontiny" />
+          <input type="hidden" name="from_name" value="Portfólio · Kaique Fontiny" />
+          <input type="checkbox" name="botcheck" class="cform__hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="cform__grid">
+            <label class="cform__field">
+              <span class="cform__label">Nome</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Seu nome" />
+            </label>
+            <label class="cform__field">
+              <span class="cform__label">E-mail</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="voce@empresa.com" />
+            </label>
+            <label class="cform__field">
+              <span class="cform__label">Empresa / marca <i>opcional</i></span>
+              <input type="text" name="company" autocomplete="organization" placeholder="Nome da empresa" />
+            </label>
+            <label class="cform__field">
+              <span class="cform__label">Assunto <i>opcional</i></span>
+              <input type="text" name="assunto" placeholder="Sobre o que quer falar" />
+            </label>
+            <label class="cform__field cform__field--full">
+              <span class="cform__label">Mensagem</span>
+              <textarea name="message" required rows="5" placeholder="Conte sobre o projeto, prazos e objetivos"></textarea>
+            </label>
+            <div class="cform__field cform__field--full">
+              <span class="cform__label">Anexar proposta <i>opcional · PDF, DOC, PPT ou imagem · até 5MB</i></span>
+              <label class="cform__drop">
+                <input type="file" name="attachment" accept=".pdf,.doc,.docx,.ppt,.pptx,image/*" />
+                <span class="cform__dropText" data-drop-default>Escolher arquivo</span>
+              </label>
+            </div>
+          </div>
+          <div class="cform__foot">
+            <button type="submit" class="cform__submit" data-magnetic>Enviar mensagem <span aria-hidden="true">→</span></button>
+            <p class="cform__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -425,7 +475,7 @@
       <a href="https://instagram.com/kaiquefontiny" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.linkedin.com/in/kaique-augusto-5b6880180/recent-activity/all/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:contatokaiquefontiny@outlook.com">E-mail</a>
-      <a href="tel:+5511944660088">(11) 94466-0088</a>
+      <a href="https://wa.me/5511944660088?text=Ol%C3%A1%2C%20Kaique%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp</a>
       <a href="assets/Curriculo-Kaique-Fontiny.pdf" download>Currículo (PDF)</a>
     </div>
   </div>

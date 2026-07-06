@@ -65,15 +65,17 @@
   $$('.nav__link:not(.nav__cta), .footer__col a, .work__link').forEach((el) => {
     if (el.children.length) return; // só links de texto puro
     const t = el.textContent.trim();
-    el.classList.add('roll');
     el.textContent = '';
+    const roll = document.createElement('span');
+    roll.className = 'roll';
     const mk = (hidden) => {
       const s = document.createElement('span');
       s.className = 'roll__t'; s.textContent = t;
       if (hidden) s.setAttribute('aria-hidden', 'true');
       return s;
     };
-    el.append(mk(false), mk(true));
+    roll.append(mk(false), mk(true));
+    el.appendChild(roll); // wrapper interno — preserva ::after/::before/border do link
   });
 
   /* ============================================================
@@ -121,8 +123,8 @@
     pre?.classList.add('done');
     veil?.classList.add('done');
     startHero();
-    // failsafe extra de unlock, mesmo se algum timeout do relay falhar
-    setTimeout(() => lockScroll(false), 1400);
+    // failsafe extra de unlock, mesmo se algum timeout do relay falhar — sem atropelar o menu mobile aberto
+    setTimeout(() => { if (typeof nav === 'undefined' || !nav || !nav.classList.contains('menu-open')) lockScroll(false); }, 1400);
     setTimeout(() => { if (pre) pre.style.display = 'none'; if (veil) veil.style.display = 'none'; }, 1600);
   }
 
@@ -174,6 +176,9 @@
   if (document.readyState === 'complete') runPreloader();
   // Failsafe: never leave the page hidden if the load event is missed.
   setTimeout(() => { if (!preRan) runPreloader(); }, 3000);
+  // Hard-safety em tempo ABSOLUTO: garante o unlock/relay antes do failsafe puro-CSS (5s),
+  // mesmo se 'load' e decode() atrasarem muito. endPreloader é idempotente.
+  setTimeout(endPreloader, 4600);
 
   /* ============================================================
      REVEAL on scroll (IntersectionObserver)
@@ -397,6 +402,7 @@
      · hover → desacelera suave (não pausa seca)
      ============================================================ */
   $$('[data-marquee]').forEach((track) => {
+    const itemsPerSet = track.children.length; // guardado ANTES de duplicar
     const baseHTML = track.innerHTML;
     let copies = 1;
     const oneSet = track.scrollWidth;
@@ -408,7 +414,12 @@
     if (reduce) return; // fica com a animação CSS (globalmente desligada pelo media query)
 
     track.classList.add('marquee--js');
-    let setW = track.scrollWidth / copies;
+    // período REAL = distância entre o 1º item de dois sets consecutivos (inclui o gap; evita salto na emenda)
+    const measure = () => {
+      const kids = track.children;
+      return (kids[itemsPerSet] ? kids[itemsPerSet].offsetLeft - kids[0].offsetLeft : track.scrollWidth / copies);
+    };
+    let setW = measure();
     let x = 0, speed = 0.9, boost = 0, hover = false, lastScrollY = window.scrollY;
     const marquee = track.closest('.marquee');
     marquee?.addEventListener('mouseenter', () => { hover = true; });
@@ -417,7 +428,10 @@
       const d = window.scrollY - lastScrollY; lastScrollY = window.scrollY;
       boost = Math.min(boost + Math.abs(d) * 0.03, 9);
     }, { passive: true });
-    window.addEventListener('resize', () => { setW = track.scrollWidth / copies; });
+    const remeasure = () => { setW = measure(); };
+    window.addEventListener('resize', remeasure);
+    // as larguras mudam quando a Archivo (Google Fonts) carrega
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
     const step = () => {
       const target = hover ? 0.18 : 0.9;
       speed += (target - speed) * 0.06;
@@ -503,6 +517,62 @@
       themeMeta.setAttribute('content', visible.size ? '#0E0D0A' : '#FFFEFE');
     }, { threshold: 0.2 });
     darkSections.forEach((el) => tObs.observe(el));
+  }
+
+  /* ============================================================
+     FORMULÁRIO DE CONTATO — envio AJAX (Web3Forms) com anexo
+     · progressive enhancement: sem JS, o form faz POST nativo
+     · valida, mostra status inline, limita anexo a 5MB
+     ============================================================ */
+  const cform = $('#contactForm');
+  if (cform) {
+    const status = $('.cform__status', cform);
+    const btn = $('.cform__submit', cform);
+    const fileInput = $('input[type=file]', cform);
+    const dropText = $('[data-drop-default]', cform);
+    const defaultDropText = dropText ? dropText.textContent : '';
+    const MAX = 5 * 1024 * 1024;
+
+    const setStatus = (msg, kind) => { if (status) { status.textContent = msg; status.className = 'cform__status' + (kind ? ' ' + kind : ''); } };
+
+    fileInput?.addEventListener('change', () => {
+      const f = fileInput.files && fileInput.files[0];
+      if (!f) { if (dropText) dropText.textContent = defaultDropText; return; }
+      if (f.size > MAX) {
+        setStatus('Arquivo acima de 5MB. Envie um menor ou mande por e-mail/WhatsApp.', 'is-error');
+        fileInput.value = ''; if (dropText) dropText.textContent = defaultDropText; return;
+      }
+      setStatus('', '');
+      if (dropText) dropText.textContent = f.name;
+    });
+
+    cform.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!cform.checkValidity()) { cform.reportValidity(); return; }
+      const key = (cform.querySelector('[name=access_key]') || {}).value || '';
+      if (!key || /COLE_AQUI/.test(key)) {
+        setStatus('Formulário ainda não ativado — falta a chave do Web3Forms (veja as instruções).', 'is-error');
+        return;
+      }
+      const restore = btn ? btn.innerHTML : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+      setStatus('', '');
+      try {
+        const res = await fetch(cform.action, { method: 'POST', body: new FormData(cform) });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.success) {
+          setStatus('Mensagem enviada! O Kaique responde em breve.', 'is-ok');
+          cform.reset();
+          if (dropText) dropText.textContent = defaultDropText;
+        } else {
+          setStatus((json && json.message) || 'Não deu para enviar. Tente pelo e-mail ou WhatsApp.', 'is-error');
+        }
+      } catch (_) {
+        setStatus('Falha de conexão. Tente pelo e-mail ou WhatsApp.', 'is-error');
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerHTML = restore; }
+      }
+    });
   }
 
   /* ============================================================
