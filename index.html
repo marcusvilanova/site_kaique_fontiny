@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#FFFEFE" id="themeColor" />
 <title>Kaique Fontiny · Social Media, Direção Criativa e Produção Audiovisual</title>
 <meta name="description" content="Portfólio de Kaique Fontiny. Social media, direção criativa e produção audiovisual para marcas nas redes." />
 <meta name="author" content="Kaique Augusto (Kaique Fontiny)" />
@@ -33,9 +34,10 @@
 
 <!-- Custom cursor -->
 <div class="cursor-dot" aria-hidden="true"></div>
-<div class="cursor-ring" aria-hidden="true"><span class="clabel">ver</span></div>
+<div class="cursor-ring" aria-hidden="true"><span class="clabel"></span></div>
 
-<!-- Preloader -->
+<!-- Preloader (a lâmina .preloader-veil varre 120ms atrás da cortina) -->
+<div class="preloader-veil" aria-hidden="true"></div>
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader__inner">
     <div class="preloader__name"><span>Kaique&nbsp;Fontiny</span></div>
@@ -109,13 +111,13 @@
     <div class="atmos-gold" aria-hidden="true"></div>
     <div class="wrap">
       <span class="eyebrow reveal">Manifesto</span>
-      <p class="manifesto__text reveal" style="margin-top:2rem">
+      <p class="manifesto__text split" data-split style="margin-top:2rem">
         Comunicar é deixar sua marca. Cada projeto parte de um objetivo claro; conceito, direção e edição vêm depois, sempre a serviço do <em>resultado</em>.
       </p>
-      <p class="reveal d2" style="margin-top:2rem;max-width:60ch;color:var(--ink-2)">
+      <p class="reveal-soft d2" style="margin-top:2rem;max-width:60ch;color:var(--ink-2)">
         Trato redes sociais como canal de relacionamento e performance, não como vitrine. Cada peça cumpre uma função: gancho nos primeiros segundos para retenção, copy adequada ao público e métricas claras para leitura de resultado. Qualidade de imagem é premissa, não diferencial isolado.
       </p>
-      <div class="manifesto__sign reveal d3"><span class="ln"></span> Kaique Fontiny · Creator Maker</div>
+      <div class="manifesto__sign reveal-soft d3"><span class="ln"></span> Kaique Fontiny · Creator Maker</div>
     </div>
   </section>
 
@@ -124,16 +126,16 @@
     <span class="sec-index">01 · Sobre</span>
     <div class="wrap about__grid">
       <div class="about__portrait reveal wipe">
-        <img src="assets/img/kf-about.jpg" alt="Retrato de Kaique Fontiny" width="960" height="1280" />
+        <img src="assets/img/kf-about.jpg" alt="Retrato de Kaique Fontiny" loading="lazy" width="960" height="1280" />
         <span class="frame" aria-hidden="true"></span>
         <span class="tag">Creator Maker</span>
       </div>
       <div class="about__body">
         <span class="eyebrow reveal">Quem sou</span>
-        <h2 class="reveal d1" style="margin-top:1.2rem">Design, audiovisual e <em>social media</em> integrados.</h2>
-        <p class="reveal d2">Kaique Augusto, também conhecido como Kaique Fontiny. Designer gráfico formado pela UNIP, com atuação em social media, direção criativa e produção audiovisual. Uno a base visual do design à produção de vídeo curto e à gestão de conteúdo em um mesmo fluxo de trabalho. Complementei a formação com os cursos de Gestão de Social Media e Marketing de Conteúdo pela Rock University.</p>
-        <p class="reveal d3">Meu processo vai do briefing à análise pós-publicação: roteiro, captação, edição, redação de copy e leitura de métricas para calibrar as próximas entregas. Atuo de forma colaborativa, próximo do público, com testes e ajustes contínuos orientados por dados.</p>
-        <div class="about__facts reveal d4">
+        <h2 class="line-mask d1" style="margin-top:1.2rem"><span>Design, audiovisual e <em>social media</em> integrados.</span></h2>
+        <p class="reveal-soft d2">Kaique Augusto, também conhecido como Kaique Fontiny. Designer gráfico formado pela UNIP, com atuação em social media, direção criativa e produção audiovisual. Uno a base visual do design à produção de vídeo curto e à gestão de conteúdo em um mesmo fluxo de trabalho. Complementei a formação com os cursos de Gestão de Social Media e Marketing de Conteúdo pela Rock University.</p>
+        <p class="reveal-soft d3">Meu processo vai do briefing à análise pós-publicação: roteiro, captação, edição, redação de copy e leitura de métricas para calibrar as próximas entregas. Atuo de forma colaborativa, próximo do público, com testes e ajustes contínuos orientados por dados.</p>
+        <div class="about__facts reveal-soft d4">
           <div><span class="k">Formação</span><br><span class="v">Design Gráfico · UNIP</span></div>
           <div><span class="k">Base</span><br><span class="v">São Paulo · Cambuci</span></div>
           <div><span class="k">Idade</span><br><span class="v">26 anos</span></div>
@@ -158,9 +160,9 @@
       <div class="approach__head">
         <div>
           <span class="eyebrow reveal">Como eu trabalho</span>
-          <h2 class="reveal d1" style="margin-top:1.2rem">Do conceito à <em>execução</em>, sem perder a intenção.</h2>
+          <h2 class="line-mask d1" style="margin-top:1.2rem"><span>Do conceito à <em>execução</em>, sem perder a intenção.</span></h2>
         </div>
-        <p class="approach__intro reveal d2">Um método que integra pesquisa, direção e análise de desempenho, para entregas consistentes em estética e resultado.</p>
+        <p class="approach__intro reveal-soft d2">Um método que integra pesquisa, direção e análise de desempenho, para entregas consistentes em estética e resultado.</p>
       </div>
       <div class="pillars">
         <article class="pillar reveal">
@@ -192,7 +194,7 @@
     <span class="sec-index">03 · Serviços</span>
     <div class="wrap">
       <span class="eyebrow reveal">O que eu entrego</span>
-      <h2 class="reveal d1" style="margin:1.2rem 0 2.5rem;font-size:var(--fs-display)">Serviços</h2>
+      <h2 class="line-mask d1" style="margin:1.2rem 0 2.5rem;font-size:var(--fs-display)"><span>Serviços</span></h2>
       <div class="svc-list">
         <div class="svc reveal" data-cursor>
           <span class="svc__n">01</span>
@@ -240,7 +242,7 @@
     <div class="wrap work__head">
       <div>
         <span class="eyebrow reveal">Cases realizados</span>
-        <h2 class="reveal d1" style="margin-top:1.2rem">Projetos <em>realizados</em></h2>
+        <h2 class="line-mask d1" style="margin-top:1.2rem"><span>Projetos <em>realizados</em></span></h2>
       </div>
       <div class="reveal d2" style="max-width:42ch">
         <p style="color:var(--ink-2)">Seleção de projetos em beleza, varejo, tecnologia e cultura. Direção, captação e edição próprias em cada entrega.</p>
@@ -249,48 +251,48 @@
     </div>
 
     <div class="pf">
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-everyou.jpg" alt="Publicidade everyou Rosa Mosqueta, Drogaria São Paulo" loading="lazy" width="908" height="1210" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-everyou.jpg" alt="Publicidade everyou Rosa Mosqueta, Drogaria São Paulo" loading="lazy" width="908" height="1210" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">01</span><span class="pf__brand">Drogaria São Paulo · everyou</span><span class="pf__role">Direção, captação e edição · linha Rosa Mosqueta</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-saude.jpg" alt="Social media na área da saúde, Drogaria São Paulo" loading="lazy" width="853" height="1137" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-saude.jpg" alt="Social media na área da saúde, Drogaria São Paulo" loading="lazy" width="853" height="1137" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">02</span><span class="pf__brand">Social Media · Saúde</span><span class="pf__role">Conteúdo e cobertura de varejo · Drogaria São Paulo</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-makeup.jpg" alt="Criação de conteúdo sobre produto de beleza" loading="lazy" width="516" height="1119" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-makeup.jpg" alt="Criação de conteúdo sobre produto de beleza" loading="lazy" width="516" height="1119" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">03</span><span class="pf__brand">Beleza</span><span class="pf__role">Criação de conteúdo sobre produto</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-clickbus.jpg" alt="Parceria ClickBus" loading="lazy" width="516" height="1119" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-clickbus.jpg" alt="Parceria ClickBus" loading="lazy" width="516" height="1119" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">04</span><span class="pf__brand">ClickBus</span><span class="pf__role">Direção, captação e edição · parceria</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-pantene.jpg" alt="Publicidade de novos produtos Pantene" loading="lazy" width="908" height="1210" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-pantene.jpg" alt="Publicidade de novos produtos Pantene" loading="lazy" width="908" height="1210" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">05</span><span class="pf__brand">Pantene</span><span class="pf__role">Direção, captação e edição · lançamento</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-loreal.jpg" alt="Cobertura de evento L'Oréal Paris, Elseve" loading="lazy" width="512" height="768" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-loreal.jpg" alt="Cobertura de evento L'Oréal Paris, Elseve" loading="lazy" width="512" height="768" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">06</span><span class="pf__brand">L'Oréal Paris · Elseve</span><span class="pf__role">Direção e cobertura · nova linha</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-samsung.jpg" alt="Cobertura de festival para Samsung no Lollapalooza" loading="lazy" width="908" height="1210" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-samsung.jpg" alt="Cobertura de festival para Samsung no Lollapalooza" loading="lazy" width="908" height="1210" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">07</span><span class="pf__brand">Samsung · Lollapalooza</span><span class="pf__role">Cobertura de festival com influenciadora</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-absolut.jpg" alt="Cobertura de festival para Absolut" loading="lazy" width="857" height="1143" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-absolut.jpg" alt="Cobertura de festival para Absolut" loading="lazy" width="857" height="1143" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">08</span><span class="pf__brand">Absolut</span><span class="pf__role">Cobertura de festival com influenciadora</span></figcaption>
       </figure>
 
-      <figure class="pf__item reveal" data-cursor>
-        <div class="pf__media"><img src="assets/img/proj-artista.jpg" alt="Assessoria e cobertura de artista em premiação" loading="lazy" width="774" height="1678" /></div>
+      <figure class="pf__item">
+        <div class="pf__media"><div class="pf__par" data-pfpar><img src="assets/img/proj-artista.jpg" alt="Assessoria e cobertura de artista em premiação" loading="lazy" width="774" height="1678" /></div></div>
         <figcaption class="pf__cap"><span class="pf__num">09</span><span class="pf__brand">Artista · Premiação</span><span class="pf__role">Assessoria, cobertura e criação de conteúdo</span></figcaption>
       </figure>
     </div>
@@ -302,15 +304,16 @@
     <div class="wrap">
       <div class="vids__head">
         <span class="eyebrow reveal">Em movimento</span>
-        <h2 class="reveal d1" style="margin-top:1.2rem">Vídeos <em>em destaque</em></h2>
-        <p class="reveal d2" style="max-width:44ch;color:var(--ink-2);margin-top:1.3rem">Direção, captação e edição de vídeo curto no formato vertical. Toque no vídeo para ativar o som.</p>
+        <h2 class="line-mask d1" style="margin-top:1.2rem"><span>Vídeos <em>em destaque</em></span></h2>
+        <p class="reveal-soft d2" style="max-width:44ch;color:var(--ink-2);margin-top:1.3rem">Direção, captação e edição de vídeo curto no formato vertical. Toque no vídeo para ativar o som.</p>
       </div>
 
       <div class="vids__list">
-        <figure class="vids__item reveal">
-          <div class="vids__frame" data-cursor>
+        <figure class="vids__item">
+          <div class="vids__frame" role="button" tabindex="0" aria-pressed="false" aria-label="Alternar som do vídeo Pantene" data-cursor data-cursor-label="som">
             <video src="assets/video/pantene.mp4" poster="assets/video/pantene-poster.jpg" muted loop playsinline preload="metadata" data-video></video>
-            <span class="vids__sound" aria-hidden="true">som</span>
+            <i class="vids__progress" aria-hidden="true"></i>
+            <span class="vids__sound" aria-hidden="true"><span class="eq"><i></i><i></i><i></i></span>som</span>
           </div>
           <figcaption class="vids__cap">
             <span class="vids__num">01</span>
@@ -319,10 +322,11 @@
           </figcaption>
         </figure>
 
-        <figure class="vids__item reveal">
-          <div class="vids__frame" data-cursor>
+        <figure class="vids__item">
+          <div class="vids__frame" role="button" tabindex="0" aria-pressed="false" aria-label="Alternar som do vídeo Cobertura de artista" data-cursor data-cursor-label="som">
             <video src="assets/video/reel.mp4" poster="assets/video/reel-poster.jpg" muted loop playsinline preload="metadata" data-video></video>
-            <span class="vids__sound" aria-hidden="true">som</span>
+            <i class="vids__progress" aria-hidden="true"></i>
+            <span class="vids__sound" aria-hidden="true"><span class="eq"><i></i><i></i><i></i></span>som</span>
           </div>
           <figcaption class="vids__cap">
             <span class="vids__num">02</span>
@@ -339,7 +343,7 @@
     <span class="sec-index">06 · Trajetória</span>
     <div class="wrap">
       <span class="eyebrow reveal">Experiência</span>
-      <h2 class="reveal d1" style="margin:1.2rem 0 2rem;font-size:var(--fs-display)">Trajetória</h2>
+      <h2 class="line-mask d1" style="margin:1.2rem 0 2rem;font-size:var(--fs-display)"><span>Trajetória</span></h2>
       <div class="timeline">
         <div class="timeline__row reveal">
           <div class="timeline__when">Por projeto</div>
@@ -366,15 +370,15 @@
     <span class="sec-index">07 · Perfil</span>
     <div class="wrap letter__grid">
       <div class="letter__aside reveal wipe">
-        <img src="assets/img/kf-perfil.jpg" alt="Retrato editorial de Kaique Fontiny" width="960" height="1280" />
+        <img src="assets/img/kf-perfil.jpg" alt="Retrato editorial de Kaique Fontiny" loading="lazy" width="960" height="1280" />
       </div>
       <div class="letter__body">
         <span class="eyebrow reveal">Perfil profissional</span>
-        <h2 class="reveal d1" style="margin-top:0.8rem">Estratégia, direção e execução <em>de ponta a ponta</em>.</h2>
-        <p class="reveal d2" style="margin-top:1.6rem">Atuo em toda a cadeia da comunicação digital: da definição de conceito e mensagem à captação, edição e análise de resultados. Reúno repertório de design gráfico, domínio de produção audiovisual e leitura de métricas em um mesmo profissional.</p>
-        <p class="reveal d2">Dirigi, captei e editei conteúdo para marcas de beleza, varejo, tecnologia e cultura, entre elas L'Oréal Paris, Pantene, Drogaria São Paulo, everyou, Samsung, Absolut e ClickBus. Cada projeto envolveu direção, captação, edição e adequação de linguagem por canal.</p>
-        <p class="reveal d3">Trabalho bem em fluxos com influenciadores e equipes de criação: briefing de creators, curadoria de UGC, cobertura em tempo real e alinhamento de timing de campanha, com foco em converter audiência em resultado.</p>
-        <p class="reveal d3">Disponível para colaborar com marcas e agências que valorizam consistência visual, agilidade de produção e decisões orientadas por dados.</p>
+        <h2 class="line-mask d1" style="margin-top:0.8rem"><span>Estratégia, direção e execução <em>de ponta a ponta</em>.</span></h2>
+        <p class="reveal-soft d2" style="margin-top:1.6rem">Atuo em toda a cadeia da comunicação digital: da definição de conceito e mensagem à captação, edição e análise de resultados. Reúno repertório de design gráfico, domínio de produção audiovisual e leitura de métricas em um mesmo profissional.</p>
+        <p class="reveal-soft d2">Dirigi, captei e editei conteúdo para marcas de beleza, varejo, tecnologia e cultura, entre elas L'Oréal Paris, Pantene, Drogaria São Paulo, everyou, Samsung, Absolut e ClickBus. Cada projeto envolveu direção, captação, edição e adequação de linguagem por canal.</p>
+        <p class="reveal-soft d3">Trabalho bem em fluxos com influenciadores e equipes de criação: briefing de creators, curadoria de UGC, cobertura em tempo real e alinhamento de timing de campanha, com foco em converter audiência em resultado.</p>
+        <p class="reveal-soft d3">Disponível para colaborar com marcas e agências que valorizam consistência visual, agilidade de produção e decisões orientadas por dados.</p>
         <a href="assets/Curriculo-Kaique-Fontiny.pdf" download class="btn btn--ink reveal d4" data-magnetic style="margin-top:2rem">Baixar currículo (PDF) ↓</a>
       </div>
     </div>
@@ -389,7 +393,7 @@
         <span class="line-mask"><span>Vamos trabalhar</span></span>
         <span class="line-mask"><span><em>juntos</em>.</span></span>
       </h2>
-      <a href="mailto:contatokaiquefontiny@outlook.com" class="contact__mail reveal d2" data-cursor>contatokaiquefontiny@outlook.com</a>
+      <a href="mailto:contatokaiquefontiny@outlook.com" class="contact__mail reveal d2" data-cursor data-cursor-label="escrever">contatokaiquefontiny@outlook.com</a>
       <div class="contact__row reveal d3">
         <a href="tel:+5511944660088" data-magnetic><span class="k">Telefone</span><span class="v">(11) 94466-0088</span></a>
         <a href="https://instagram.com/kaiquefontiny" target="_blank" rel="noopener" data-magnetic><span class="k">Instagram</span><span class="v">@kaiquefontiny</span></a>
@@ -433,6 +437,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
