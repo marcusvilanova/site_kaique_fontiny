@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+
+# Material de referência / arquivos de trabalho (grande demais p/ o GitHub — .mov de 192MB)
+Fotos/
+
+# Projeto Node separado (não faz parte do site estático da raiz)
+site_kaique_fontiny/
+
+# Ferramentas locais do editor/agente
+.claude/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs e temporários
+*.log

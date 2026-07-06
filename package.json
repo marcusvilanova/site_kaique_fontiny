@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-kaique-fontiny",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site-portfolio estatico de Kaique Fontiny (HTML/CSS/JS). Nao tem build: e so servir a pasta.",
+  "scripts": {
+    "dev": "python -m http.server 5500",
+    "start": "python -m http.server 5500"
+  }
+}
